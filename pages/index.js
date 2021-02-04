@@ -1,23 +1,37 @@
+//IMPORTS
 import Head from '@components/Head/Head'
 import Header from '@components/Header/Header'
+import Sandbox from '@components/Sandbox/Sandbox'
 import Footer from '@components/Footer/Footer'
 
-export default function Home() {
+//VARS
+export async function getStaticProps() {
+  let title = "Holy Mountain Component Demo"
+  let description = "This is the inital demo template for Holy Mount frontend components."
+  let footerMessage = "Do Easy"
+
+    return {
+      props: {
+        title,
+        description,
+        footerMessage,
+      }, // will be passed to the page component as props
+  }
+}
+
+export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head/>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title={props.title} />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          {props.description}
         </p>
       </main>
 
-      <Footer />
+      <Footer footerMessage={props.footerMessage} />
     </>
   )
 }

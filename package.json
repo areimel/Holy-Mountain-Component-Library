@@ -1,8 +1,9 @@
 {
   "name": "next-netlify-starter",
   "version": "0.2.0",
-  "private": true,
+  "private": false,
   "scripts": {
+    "init-setup": "npm install && npm audit fix",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

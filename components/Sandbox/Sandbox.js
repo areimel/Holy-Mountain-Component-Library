@@ -1,11 +1,15 @@
 import styles from './Sandbox.module.css'
 
-export default function Footer() {
+export default function Sandbox(
+  title,
+) {
   return (
     <>
-      <footer className={styles.footer}>
-        Made with <img src="/netliheart.svg" alt="Netlify Logo" className={styles.logo} /> for you
-      </footer>
+      <section>
+      	<div id="sandbox">
+      		
+      	</div>
+      </section>
     </>
   )
 }
