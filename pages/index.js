@@ -1,6 +1,7 @@
 //IMPORTS
 import Head from '@components/Head/Head'
 import Header from '@components/Header/Header'
+import Container from '@components/Container/Container'
 import Sandbox from '@components/Sandbox/Sandbox'
 import Footer from '@components/Footer/Footer'
 
@@ -29,6 +30,9 @@ export default function Home(props) {
         <p className="description">
           {props.description}
         </p>
+        <Container>
+        	LORUM IPSUM
+        </Container>
       </main>
 
       <Footer footerMessage={props.footerMessage} />
