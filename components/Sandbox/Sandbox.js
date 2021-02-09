@@ -1,15 +1,18 @@
-import styles from './Sandbox.module.css'
+import styles from './Sandbox.module.scss'
+import Container from '@components/Container/Container'
 
-export default function Sandbox(
-  title,
-) {
+export default function Sandbox({ 
+	children,
+	title, 
+}) {
   return (
-    <>
-      <section>
-      	<div id="sandbox">
-      		
-      	</div>
-      </section>
-    </>
+    <section  className={styles.sandbox}>
+      <Container>
+        <div  className={styles.content}>
+    	  {children}
+        </div>
+      </Container>
+     
+    </section>
   )
 }

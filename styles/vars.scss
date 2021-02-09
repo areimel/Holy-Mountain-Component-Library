@@ -3,17 +3,23 @@
 /***** ========= *****/
 
 /***** Color Variables *****/
-	$black_1: 		#212121;
-	$white_1: 		#fafafa;
+	$black: 		#212121;
+	$white: 		#fafafa;
 	$grey_1:		#ececec;
 	$grey_2:		#3e3e3e;
 
-	/***** Named Colors *****/
-		$primary_color:		$black_1;
-		$secondary_color:		$white_1;
+	$nasa_blue:			#034694;
+	$nasa_light_blue:	#6A7AB5;
+	$nasa_grey:			#D1D3D4;
+	$nasa_gold:			#DBA111;
+	$nasa_red:				#ED1C23;
 
-		$background_color:	$white_1;
-		$text_color:			$black_1;
+	/***** Named Colors *****/
+		$primary_color:		$black;
+		$secondary_color:		$white;
+
+		$background_color:	$white;
+		$text_color:			$black;
 		$accent_color:		$grey_1;
 
 

@@ -9,7 +9,7 @@ import Footer from '@components/Footer/Footer'
 export async function getStaticProps() {
   let title = "Holy Mountain Component Demo"
   let description = "This is the inital demo template for Holy Mount frontend components."
-  let footerMessage = "Proceeds the Weedian - Nazareth"
+  let footerMessage = "Proceed"
 
     return {
       props: {
@@ -27,11 +27,14 @@ export default function Home(props) {
 
       <main>
         <Header title={props.title} />
-        <p className="description">
-          {props.description}
-        </p>
+        <Container>
+          <p className="description">
+            {props.description}
+          </p>
+        </Container>
+        
         <Container flex>
-        	LORUM IPSUM
+        	<Sandbox/>
         </Container>
       </main>
 
