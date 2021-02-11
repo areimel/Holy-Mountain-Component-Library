@@ -1,5 +1,6 @@
 //IMPORTS
-import Head from '@components/Head/Head'
+//import Head from '@components/Head/Head'
+import Head from 'next/head'
 import Header from '@components/Header/Header'
 import Container from '@components/Container/Container'
 import Sandbox from '@components/Sandbox/Sandbox'
@@ -8,7 +9,7 @@ import Footer from '@components/Footer/Footer'
 //VARS
 export async function getStaticProps() {
   let title = "Holy Mountain Component Demo"
-  let description = "This is the inital demo template for Holy Mount frontend components."
+  let description = "This is the inital demo template for Holy Mountain frontend components."
   let footerMessage = "Proceed"
 
     return {
@@ -23,7 +24,10 @@ export async function getStaticProps() {
 export default function Home(props) {
   return (
     <>
-      <Head/>
+      <Head>
+        <title>Holy Mountain Component</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
 
       <main>
         <Header title={props.title} />
