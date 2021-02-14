@@ -1,5 +1,5 @@
 import styles from './Sandbox.module.scss'
-import Container from '@components/Container/Container'
+import Container from '@components/Template/Container/Container'
 
 export default function Sandbox({ 
 	children,
@@ -9,7 +9,10 @@ export default function Sandbox({
     <section  className={styles.sandbox}>
       <Container>
         <div  className={styles.content}>
-    	  {children}
+          <p className={styles.title}>Component Sandbox</p>
+          <div className={styles.inner}>
+            {children}
+          </div>
         </div>
       </Container>
      
