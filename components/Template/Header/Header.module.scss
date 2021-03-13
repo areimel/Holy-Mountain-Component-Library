@@ -35,6 +35,8 @@ $static_width: 500px;
 
 	.title{
 		@include flex_center;
+		position: relative;
+		bottom: -5px;
 
 	}
 }

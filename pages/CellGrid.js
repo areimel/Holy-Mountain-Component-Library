@@ -7,26 +7,28 @@ import Sandbox from '@components/Template/Sandbox/Sandbox'
 import ComponentMeta from '@components/Template/ComponentMeta/ComponentMeta'
 import Footer from '@components/Template/Footer/Footer'
 
-import FixedSplit from '@components/FixedSplit/FixedSplit'
+import CellGrid from '@components/CellGrid/CellGrid'
 
 //VARS
 export async function getStaticProps() {
   
   //General Page VARS
-	  let title = "Initial Component Demo"
+	  let title = "CellGrid"
 	  let author = "Alec Reimel"
 	  let authorTeam = "Planet Caravan Studios"
 	  let description ="\
-	  						This is the inital demo template for Holy Mountain frontend components.  \
-	  						Clone this page out for demoing new components.\
-	  					"
-	  let contentProps = 'N/A'
-	  let libraries = "N/A"
+		Flexbox-powered cell/card layout.  \
+		Useful for body content or listings.\
+		Visual content is positioned inside transparent cells,\
+		using max-width and padding to control spacing rather than margins.\
+	  "
+	  let contentProps = 'columns, cellInnerWidth'
+	  let libraries = "Styled Components"
 	  
 	  let footerMessage = "Created by Planet Caravan Studios"
   
   //Component Content
-  	let contentLeft = "Lorum Ipsum Dolor"
+  	
 
     return {
       props: {
@@ -37,7 +39,6 @@ export async function getStaticProps() {
         contentProps,
         libraries,
         footerMessage,
-        contentLeft,
       }, // will be passed to the page component as props
   }
 }
@@ -63,13 +64,10 @@ export default function Home(props) {
         </Container>
         
         <Sandbox>
-          {/*<FixedSplit 
-                      backgroundLeft="url('https://source.unsplash.com/600x600/?shiba')"
-                      fixedLeft
-                      fixedWidth="500px"
-                      contentLeft = {props.contentLeft}
-                      backgroundRight="#dba111"
-                    />*/}
+          <CellGrid
+            columns="3"
+            cellInnerWidth="450px"
+          />
         </Sandbox>
         
       </main>

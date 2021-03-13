@@ -2,11 +2,23 @@
 @import "@styles/mixins.scss";
 
 
-/***** ====================================== *****/
-/***** hm_layout_1 - image/copy side by side *****/
-/***** ====================================== *****/
+/**************************************************
+Holy Mountain Framework Component
+
+
+Component Name: 	FixedSplit
+Descriptionm:		
+
+
+**************************************************/
 	.cellWrapper{
 		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		@media only screen and (max-width : 900px) {
+			flex-direction: column;
+		}
 
 		/* Set static width here, override in style.css file */
 		$static_width: 800px;
@@ -19,12 +31,22 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
+			//border: 1px dotted #000;
+
+			&.fixedWidth{
+				position: relative;
+			}
+
+			&.staticWidth{
+				position: relative;
+			}
 		}
 
 		.inner{
 			width: 100%;
 			max-width: 650px;
-			background-color: #ececec;
+			background-color: rgba(200,200,200,0.8);
+			backdrop-filter: blur(5px);
 			padding: 35px 50px;
 		}
 	}
@@ -33,15 +55,6 @@
 	/***** static size: this class styles the div with a fixed pixel size  *****/
 		.-hm_layout_1>.static_size{
 			width: var(--static_width); /* sets the static size */
-			
-			padding: 100px 35px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
 		}
 
 		.-hm_layout_1>.static_size>.inner{
@@ -80,14 +93,6 @@
 		.-hm_layout_1>.dynamic_size{
 			width: calc(100% - var(--static_width)); /* sets the dynamic size */
 
-			padding: 100px 35px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
 		}
 		.-hm_layout_1>.dynamic_size>.inner{
 			width: 100%;
