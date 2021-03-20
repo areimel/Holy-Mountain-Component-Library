@@ -9,7 +9,7 @@ export default function Header({ title }) {
   	    
   	    <div className={styles.contentLeft}>
               <a className={styles.logo} href="/">
-                <Image
+                <img
                  src="/img/hm-logo-nav.png"
                  alt="Holy Mountain Logo"
                  width={150}
