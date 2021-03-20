@@ -1,0 +1,10 @@
+{
+  "/BasicForm": "pages/BasicForm.js",
+  "/CellGrid": "pages/CellGrid.js",
+  "/FixedSplit": "pages/FixedSplit.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
+}
