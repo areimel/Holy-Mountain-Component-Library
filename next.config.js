@@ -1,5 +1,5 @@
 module.exports = {
-  distDir: 'build',
+  //distDir: 'build',
   serverRuntimeConfig: {
     // Will only be available on the server side
     //mySecret: 'secret',
@@ -9,4 +9,7 @@ module.exports = {
     // Will be available on both server and client
     staticFolder: '/fonts',
   },
+  images: {
+      loader: 'imgix',
+    },
 }
