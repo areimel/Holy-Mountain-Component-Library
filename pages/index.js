@@ -7,7 +7,8 @@ import Sandbox from '@components/Template/Sandbox/Sandbox'
 import ComponentMeta from '@components/Template/ComponentMeta/ComponentMeta'
 import Footer from '@components/Template/Footer/Footer'
 
-import FixedSplit from '@components/FixedSplit/FixedSplit'
+import ModalWrapper from '@components/Modals/ModalWrapper/ModalWrapper'
+import Button1 from '@components/Typography/Button1/Button1'
 
 //VARS
 export async function getStaticProps() {
@@ -63,18 +64,38 @@ export default function Home(props) {
         </Container>
         
         <Sandbox>
-          {/*<FixedSplit 
-                      backgroundLeft="url('https://source.unsplash.com/600x600/?shiba')"
-                      fixedLeft
-                      fixedWidth="500px"
-                      contentLeft = {props.contentLeft}
-                      backgroundRight="#dba111"
-                    />*/}
+          {/*Components go here*/}
+          <div>
+          	Set modal buttons by using the modal_open classes <br/>
+          	and set the specifc modal with the modal prop.  <br/><br/>
+
+          	The video modal uses the 'dataYoutubeId' prop to set the video. <br/>
+          	Video iFrame is cleared out on modal close. <br/>
+          	The video modal currently only supports YouTube videos, <br/>
+          	but is based on a generic iFrame, so further support is coming soon.
+          	<br/><br/><br/>
+
+          	<Button1
+          		className="modal_open"
+          		modal="DefaultModal"
+          	>Default Modal</Button1>
+
+          	<br/><br/><br/>
+          	
+          	<Button1
+          		className="video_modal_open"
+          		modal="VideoModal"
+          		dataYoutubeId="ubBPXQ5U2_0"
+          	>Video Modal</Button1>
+          	
+          </div>
         </Sandbox>
         
       </main>
 
       <Footer footerMessage={props.footerMessage} />
+
+      <ModalWrapper/>
     </>
   )
 }

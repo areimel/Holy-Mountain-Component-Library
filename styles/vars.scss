@@ -8,8 +8,8 @@ Description:	Store SCSS vars here
 
 
 /***** Color Variables *****/
-	$black: 		#212121;
-	$white: 		#fafafa;
+	$black: 			#212121;
+	$white: 			#fafafa;
 	$grey_1:		#ececec;
 	$grey_2:		#3e3e3e;
 
@@ -18,24 +18,24 @@ Description:	Store SCSS vars here
 	$nasa_grey:	#D1D3D4;
 
 	/***** Named Colors *****/
-		$primary_color:		$black;
+		$primary_color:			$black;
 		$secondary_color:		$white;
 
 		$background_color:	$white;
-		$text_color:			$black;
-		$accent_color:		$grey_1;
+		$text_color:				$black;
+		$accent_color:			$grey_1;
 
 
 /***** Fonts *****/
-	$font_body:		"MyUnderwood";
-	$font_display:	"AncientMedium";
-	$font_alt:			"ImpactLabel";
+	$font_body:		"IBM Plex Mono";
+	$font_display:	"Computerfont";
+	$font_alt:			"Windows Command Promt";
 
 /***** Font Sizes *****/
 	$font_size_heading:	65px;
 	$font_size_subhead:	36px;
 	$font_size_body:		20px;
-	$font_size_detail:	16px;
+	$font_size_detail:		16px;
 
 /***** Letter Spacing *****/
 	$letterSpacingWide:		0.035em;
@@ -54,9 +54,9 @@ Description:	Store SCSS vars here
 
 
 /***** Z-Index Ranges *****/
-	$z_index_base: 	0;
+	$z_index_base: 		0;
 	$z_index_medium: 	100;
-	$z_index_high: 	1000;
+	$z_index_high: 		1000;
 
 /***** Shadows *****/
 

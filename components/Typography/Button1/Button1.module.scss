@@ -15,32 +15,30 @@ Description:
 .Button1{
 	position: relative;
 	display: inline-block;
-	@include paperTexture;
-	background-color: $black;
-	padding: 0.45em 0.85em;
-	font-family: $font_display;
-	font-size: $font_size_subhead;
-	color: $white;
-	//transform: rotate(1deg);
-
-	transition: $transition_medium;
-	transition-delay: -0.075s;
-	will-change: text-shadow;
-	@include solidShadowHover;
+	background-color: transparent;
+	padding: 0.45em 2ch;
+	text-align: center;
+	//font-family: $font_body;
+	font-size: $font_size_body;
+	color: $black;
+	border: solid 1px $black;
+	//border-radius: 50px;
+	transition: $transition_fast;	
 
 	span{
 		display: inline-block;
-		//transform: rotate(-2deg);
+		padding-top: 3px;
+		border: solid 1px transparent;
+		color: inherit;
+		transition: $transition_fast;	
 	}
 
-	&.skew{ 
-
-	}
-	&.skewVar1{
-		transform: rotate(-1deg);
+	&:hover{
 
 		span{
-			transform: rotate(2deg);
+			border-bottom: solid 1px $black;
 		}
 	}
+
+	
 }
