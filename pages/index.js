@@ -9,6 +9,7 @@ import Footer from '@components/Template/Footer/Footer'
 
 import ModalWrapper from '@components/Modals/ModalWrapper/ModalWrapper'
 import Button1 from '@components/Typography/Button1/Button1'
+import CustomHR from '@components/Typography/CustomHR/CustomHR'
 
 //VARS
 export async function getStaticProps() {
@@ -73,17 +74,19 @@ export default function Home(props) {
           	Video iFrame is cleared out on modal close. <br/>
           	The video modal currently only supports YouTube videos, <br/>
           	but is based on a generic iFrame, so further support is coming soon.
-          	<br/><br/><br/>
+          	<CustomHR/>
+          	The Thank You modal is triggered by a URL parameter of '<a href="/?thank_you">?thank_you</a>'.
+          	<CustomHR/>
 
           	<Button1
           		className="modal_open"
           		modal="DefaultModal"
           	>Default Modal</Button1>
 
-          	<br/><br/><br/>
+          	<br/><br/>
           	
           	<Button1
-          		className="video_modal_open"
+          		className="modal_open"
           		modal="VideoModal"
           		dataYoutubeId="ubBPXQ5U2_0"
           	>Video Modal</Button1>

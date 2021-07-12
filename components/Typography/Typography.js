@@ -10,19 +10,19 @@ export default function Typography({
   //page vars
 }) {
   return (
-<>
+<div className={styles.outer}>
 	<Wrapper 
 		className={styles.wrapper} 
 	>
 		<ul>
-			<li className={styles.old_english + " old_english"} >
-				Display Font: <span>AncientMedium</span>
+			<li className={styles.display + " "} >
+				Display Font: <span>ComputerFont</span>
 			</li>
-			<li className={styles.labelmaker + " labelmaker"}>
-				Alt Font: <span>Impact Label</span>
+			<li className={styles.alt + " "}>
+				Alt Font: <span>Windows Command Prompt</span>
 			</li>
-			<li className={styles.typewriter + " typewriter"}>
-				Body Font: <span>MyUnderwood</span>
+			<li className={styles.bodyFont + " "}>
+				Body Font: <span>IBM Plex Mono</span>
 			</li>
 		</ul>
 	</Wrapper>
@@ -31,50 +31,50 @@ export default function Typography({
 		className={styles.wrapper} 
 	>
 		<ul>
-			<li className={styles.heading + " old_english"} >
+			<li className={styles.heading +" "+ styles.display} >
 				Font Size: <span>Heading</span>
 			</li>
-			<li className={styles.subhead + " old_english"}>
+			<li className={styles.subhead +" "+ styles.display}>
 				Font Size: <span>Subhead</span>
 			</li>
-			<li className={styles.body + " old_english"}>
+			<li className={styles.body +" "+ styles.display}>
 				Font Size: <span>Body</span>
 			</li>
-			<li className={styles.detail + " old_english"}>
+			<li className={styles.detail +" "+ styles.display}>
 				Font Size: <span>Detail</span>
 			</li>
 		</ul>
 
 		<ul>
-			<li className={styles.heading + " labelmaker"} >
+			<li className={styles.heading +" "+ styles.alt} >
 				Font Size: <span>Heading</span>
 			</li>
-			<li className={styles.subhead + " labelmaker"}>
+			<li className={styles.subhead +" "+ styles.alt}>
 				Font Size: <span>Subhead</span>
 			</li>
-			<li className={styles.body + " labelmaker"}>
+			<li className={styles.body +" "+ styles.alt}>
 				Font Size: <span>Body</span>
 			</li>
-			<li className={styles.detail + " labelmaker"}>
+			<li className={styles.detail +" "+ styles.alt}>
 				Font Size: <span>Detail</span>
 			</li>
 		</ul>
 
 		<ul>
-			<li className={styles.heading + " typewriter"} >
+			<li className={styles.heading +" "+ styles.bodyFont} >
 				Font Size: <span>Heading</span>
 			</li>
-			<li className={styles.subhead + " typewriter"}>
+			<li className={styles.subhead +" "+ styles.bodyFont}>
 				Font Size: <span>Subhead</span>
 			</li>
-			<li className={styles.body + " typewriter"}>
+			<li className={styles.body +" "+ styles.bodyFont}>
 				Font Size: <span>Body</span>
 			</li>
-			<li className={styles.detail + " typewriter"}>
+			<li className={styles.detail +" "+ styles.bodyFont}>
 				Font Size: <span>Detail</span>
 			</li>
 		</ul>
 	</Wrapper>
-</>
+</div>
   )
 }

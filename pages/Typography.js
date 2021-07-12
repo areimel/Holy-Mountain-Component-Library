@@ -18,8 +18,7 @@ export async function getStaticProps() {
 	  let author = "Alec Reimel"
 	  let authorTeam = "Planet Caravan Studios"
 	  let description ="\
-	  						This is the inital demo template for Holy Mountain frontend components.  \
-	  						Clone this page out for demoing new components.\
+	  						Fonts and Font Sizes demo.\
 	  					"
 	  let contentProps = 'N/A'
 	  let libraries = "N/A"
@@ -47,11 +46,11 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Necro Cult Zine Component</title>
+        <title>Holy Mountain Component</title>
       </Head>
 
       <main>
-        <Header title="Necro Cult Zine Component Demo" />
+        <Header title="Holy Mountain Component Demo" />
         <Container>
           <ComponentMeta
             title={props.title}

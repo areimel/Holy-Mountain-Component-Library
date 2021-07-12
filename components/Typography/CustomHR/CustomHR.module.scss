@@ -13,8 +13,8 @@ Description:		Barbed wire graphic
 **************************************************/
 
 .CustomHR{
-	width: 100%;
-	max-width: 800px;
-	margin: 20px auto;
-	padding: 0px 35px
+	width: calc(100% - 30px);
+	max-width: 300px;
+	margin: 35px auto;
+	border-bottom: solid 1px $black
 }

@@ -1,5 +1,10 @@
-import styles from './BasicForm.module.scss'
+import React, { useState } from "react";
+import styles from './BasicForm.module.scss';
 import styled from "styled-components";
+import DatePicker, { subMonths } from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 const FormOuter = styled.div`
 	background: ${props => props.background};
@@ -9,12 +14,17 @@ const FormOuter = styled.div`
 `;
 
 
+
 export default function BasicForm({ 
   //page vars
   maxWidth,
   background,
   shadow,
 }) {
+
+	const [startDate, setStartDate] = useState(new Date());
+	//const [startDate, setStartDate] = useState(null);
+
   return (
   	<FormOuter 
   		className={styles.formOuter} 
@@ -53,20 +63,34 @@ export default function BasicForm({
 
 	  		{/* Email */}
 	  		<label className={styles.inputWrapper + ' ' + styles.half}>
-	  			<span className="{styles.visualLabel}">Email*</span>
-	  			<input type="email" name="data[email]" inputmode="email" placeholder="" required aria-label="Email" />
+	  			<span className={styles.visualLabel}>Email*</span>
+	  			<input type="email" name="data[email]" inputMode="email" placeholder="" required aria-label="Email" />
 	  		</label>
 	  		
 	  		{/* Phone */}
 	  		<label className={styles.inputWrapper + ' ' + styles.half}>
-	  			<span className="{styles.visualLabel}">Phone</span>
-	  			<input type="tel" name="data[phone]" inputmode="tel" placeholder=""  aria-label="Phone" />
+	  			<span className={styles.visualLabel}>Phone</span>
+	  			<input type="tel" name="data[phone]" inputMode="tel" placeholder=""  aria-label="Phone" />
 	  		</label>
-	  		
+
+	  		{/* Birth Date */}
+	  		<label className={styles.inputWrapper + ' ' + styles.full}>
+	  			<span className={styles.visualLabel}>Date of Birth</span>
+	  			<DatePicker 
+	  				selected={startDate}
+  				      onChange={(date) => setStartDate(date)}
+  				      peekNextMonth
+  				      showMonthDropdown
+  				      showYearDropdown
+  				      dropdownMode="select"
+	  				name="data[dob]"
+	  				aria-label="Date of Birth"
+	  			/>
+	  		</label>	  		
 	  		
   			{/* Comments */}
 	  		<label className={styles.inputWrapper + ' ' + styles.full}>
-	  			<span className="visual_label">Comments*</span>
+	  			<span className={styles.visualLabel}>Comments*</span>
 	  			<textarea name="data[comments]" placeholder="" required aria-label="Comments"></textarea>
 	  		</label>	
 	  		

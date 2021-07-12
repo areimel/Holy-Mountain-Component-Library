@@ -19,7 +19,7 @@ export async function getStaticProps() {
 	  let author = "Alec Reimel"
 	  let authorTeam = "Planet Caravan Studios"
 	  let description ="\
-		This is the inital demo template for Necro Cult Zine frontend components.  \
+		This is the inital demo template for Holy Mountain frontend components.  \
 		Clone this page out for demoing new components.\
 	  					"
 	  let contentProps = 'none'
@@ -48,11 +48,11 @@ export default function Slider(props) {
 return (
 	<>
 		<Head>
-			<title>Necro Cult Zine Component</title>
+			<title>Holy Mountain Component</title>
 		</Head>
 
 		<main>
-			<Header title="Necro Cult Zine Component Demo" />
+			<Header title="Holy Mountain Component Demo" />
 			<Container>
 				<ComponentMeta
 					title={props.title}

@@ -19,30 +19,35 @@ Description:		Typography samples for Necro Cult Zine
 .wrapper{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
 
 	ul{
 		background-color: $white;
 		list-style: none;
 		padding: 35px;
-		margin: 35px;
+		margin: 15px 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
 
 		
 		li{
-			margin-bottom: 35px;
+			margin-bottom: 15px;
 			display: inline-block;
 
 			//Fonts
-			&.old_english{
+			&.display{
 				font-size: $font_size_heading;
+				font-family: $font_display;
 			}
-			&.labelmaker{
+			&.alt{
 				font-size: $font_size_subhead;
-				background-color: $black;
-				color: $white;
+				font-family: $font_alt;
 			}
-			&.typewriter{
+			&.bodyFont{
 				font-size: $font_size_body;
+				font-family: $font_body;
 			}
 
 			//Font Sizes

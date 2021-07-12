@@ -1,4 +1,4 @@
-import styles from './VideoModal.module.scss';
+import styles from './style.module.scss';
 import styled from "styled-components";
 //import $ from 'jquery'; 
 import Button1 from '@components/Typography/Button1/Button1'
@@ -22,7 +22,7 @@ return (
 <Modal className={styles.VideoModal + " modal video"} data-modal="VideoModal">
 	<div className={styles.modalCloseSection}>
 		<div className={styles.modalClose + " modal_close"}>
-			<img src="/img/graphics/x-1.png" alt="Close"/>
+			<span>&#10005;</span>
 		</div>
 	</div>
 	

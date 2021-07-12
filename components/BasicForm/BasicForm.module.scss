@@ -49,8 +49,8 @@ Descriptionm:		Basic, customizable form with evenly spaced
 				justify-content: center;
 				align-items: flex-start;
 
-				.submit{
-
+				&.submit{
+					flex-direction: row;
 				}
 
 				&.half{
@@ -68,7 +68,11 @@ Descriptionm:		Basic, customizable form with evenly spaced
 				}
 			}
 
-
+		/***** labels *****/
+			.visualLabel{
+				font-size: $font_size_detail;
+				margin-bottom: 5px;
+			}
 		/***** inputs *****/
 			$innerPadding: 10px;
 			$transition: 0.25s ease-in-out;

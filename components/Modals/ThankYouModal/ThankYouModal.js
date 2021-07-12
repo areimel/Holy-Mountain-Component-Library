@@ -1,4 +1,4 @@
-import styles from './DefaultModal.module.scss';
+import styles from './style.module.scss';
 import styled from "styled-components";
 //import $ from 'jquery'; 
 import Button1 from '@components/Typography/Button1/Button1'
@@ -14,20 +14,20 @@ const Modal = styled.div`
 	
 `;
 
-export default function DefaultModal({ 
+export default function ThankYouModal({ 
   //page vars
 }) {
 return (
-<Modal className={styles.DefaultModal + " modal"} data-modal="DefaultModal">
+<Modal className={styles.ThankYouModal + " modal"} data-modal="ThankYouModal">
 	<div className={styles.modalCloseSection}>
 		<div className={styles.modalClose + " modal_close"}>
-			<img src="/img/graphics/x-1.png" alt="Close"/>
+			<span>&#10005;</span>
 		</div>
 	</div>
 	
 	<div className={styles.copy}>
 		<header className={styles.headline}>
-			STANDARD MODAL
+			THANK YOU MODAL
 		</header>
 		<p className={styles.main}>
 			Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -37,12 +37,6 @@ return (
 			ligula. Praesent volutpat purus et lectus elementum 
 			molestie. 
 		</p>		
-	</div>
-
-	<div className={styles.cta}>
-		<Button1>
-			Click Here
-		</Button1>
 	</div>
 	
 </Modal>  	

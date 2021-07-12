@@ -47,11 +47,11 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Necro Cult Zine Component</title>
+        <title>Holy Mountain Component</title>
       </Head>
 
       <main>
-        <Header title="Necro Cult Zine Component Demo" />
+        <Header title="Holy Mountain Component Demo" />
         <Container>
           <ComponentMeta
             title={props.title}

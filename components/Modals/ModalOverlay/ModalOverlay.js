@@ -1,4 +1,4 @@
-import styles from './ModalOverlay.module.scss'
+import styles from './style.module.scss'
 import styled from "styled-components";
 import $ from 'jquery'; 
 
