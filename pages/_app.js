@@ -1,6 +1,15 @@
 import '@styles/style.scss'
 import Head from 'next/head'
 
+//Swiper.JS
+import 'swiper/swiper.scss';
+import 'swiper/components/a11y/a11y.scss';
+import 'swiper/components/controller/controller.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/thumbs/thumbs.scss';
+import "@styles/sliders.scss";
+
 function Application({ Component, pageProps }) {
   return (
     <>

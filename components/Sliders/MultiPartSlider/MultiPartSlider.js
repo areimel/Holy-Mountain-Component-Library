@@ -1,4 +1,4 @@
-import styles from './MultiPartSlider.module.scss'
+import styles from './style.module.scss'
 import styled from "styled-components";
 
 //import BlogListing from '@components/BlogListing/BlogListing'

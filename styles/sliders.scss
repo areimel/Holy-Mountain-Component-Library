@@ -1,0 +1,50 @@
+/**************************************************
+Sliders File
+
+Global settings for sliders, outside of components
+
+**************************************************/
+@import "@styles/vars.scss";
+@import "@styles/mixins.scss";
+
+$font: $font_alt;
+$size: 100px;
+$color: $black;
+
+.swiper-button-prev {
+	top: 50%;
+	transform: translateY(50%);
+	&::after {
+		content:"<";
+		font-family: $font;
+		font-size: $size;
+		color: $color;
+		transition: $transition_fast;
+		padding: 10px;
+	}
+
+	&:hover{
+		&::after {
+			color:$red;
+		}
+	}
+}
+
+.swiper-button-next {
+	top: 50%;
+	transform: translateY(50%);
+	&::after {
+		content:">";
+		font-family: $font;
+		font-size: $size;
+		color: $color;
+		transition: $transition_fast;
+		padding: 10px;
+	}
+
+	&:hover{
+		&::after {
+			color:$red;
+		}
+	}
+}
