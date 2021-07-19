@@ -6,7 +6,7 @@ Description:	Store SCSS mixins here
 Call: @include backgroundStandard;
 
 **************************************************/
-
+@import "@styles/vars.scss";
 
 @mixin flex_center {
 	display: flex;

@@ -11,25 +11,13 @@ Description:
 
 
 **************************************************/
-.Slider{
-	padding: 75px 75px;
-}
 
-.SlideOutter{
-	width: 100%;
-	min-height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: visible;
-}
-
-.SlideInner{
+.slide{
 	width: 100%;
 	max-width: 850px;
-	background: $white;
-	padding: 35px;
-	box-shadow: $nice_shadow_short;
+	//background: $white;
+	//padding: 35px;
+	//box-shadow: $nice_shadow_short;
 
 	display: flex;
 	flex-direction: row;

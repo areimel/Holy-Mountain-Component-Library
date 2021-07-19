@@ -16,7 +16,7 @@
 
 }
 
-$static_width: 500px;
+$static_width: 450px;
 
 .contentLeft{
 	display: flex;
@@ -31,13 +31,14 @@ $static_width: 500px;
 		padding: 10px;
 		margin-right: 30px;
 		border: none;
+		width: 150px;
 	}
 
 	.title{
 		@include flex_center;
 		position: relative;
 		bottom: -5px;
-
+		width: calc(100% - 150px);
 	}
 }
 
@@ -47,5 +48,5 @@ $static_width: 500px;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	max-width: calc(100% - $static_width);
+	max-width: calc(100% - #{$static_width});
 }

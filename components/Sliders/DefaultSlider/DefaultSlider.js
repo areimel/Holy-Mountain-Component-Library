@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './style.module.scss'
 import styled from "styled-components";
 
+import BasicSlide from '@components/Sliders/BasicSlide/BasicSlide'
+
 
 //import BlogListing from '@components/BlogListing/BlogListing'
 
@@ -41,21 +43,13 @@ export default function DefaultSlider({
 		<SwiperSlide className={styles.SlideOutter}>
 			<div className={styles.SlideInner}>
 				
-				<div className={styles.image}>
-					<img src="/img/hm-logo-nav.png" alt="Holy Mountain Logo" />
-				</div>
-				<div className={styles.copy}>
-					<p className={styles.title}>The Holy Mountain</p>
-					<p className={styles.body}>
-						Lorem ipsum dolor sit amet, 
-						consectetur adipiscing elit, 
-						sed do eiusmod tempor incididunt ut l
-						abore et dolore magna aliqua. Ut enim 
-						ad minim veniam, quis nostrud 
-						exercitation ullamco laboris 
-						nisi ut aliquip ex ea commodo consequat. 
-					</p>
-				</div>
+				<BasicSlide
+					image="/img/hm-logo-nav.png"
+					imageAlt="The Holy Mountain"
+					titleCopy="BasicSlide Component"
+					bodyCopy="This slide is its own component, with 
+						image, imageAlt, titleCopy, and bodyCopy props."
+				/>
 
 			</div>
 		</SwiperSlide>
