@@ -117,3 +117,21 @@ GENERAL
 			font-family: inherit;
 			vertical-align: baseline;
 		}
+
+
+	/***** Container *****/
+		.container{
+			width: 100%;
+			max-width: 1250px;
+			margin: 0 auto;
+		}
+
+	/***** Flex *****/
+		.flexRow{
+			display: flex;
+			flex-direction: row;
+		}
+		.flexColumn{
+			display: flex;
+			flex-direction: column;
+		}

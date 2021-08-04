@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const Button = styled.a`
 	
+	&.sideMargin{
+		margin: 0px 15px;
+	}
+
 `;
 
 export default function Button1({ 
@@ -10,7 +14,7 @@ export default function Button1({
 	children,
 	href,
 	newTab,
-	className,
+	extraClass,
 	skew,
 	modal,
 	dataYoutubeId
@@ -18,7 +22,7 @@ export default function Button1({
   return (
   	<Button  
   		href={(href? href : "#")} 
-  		className={styles.Button1+' '+className} 
+  		className={styles.Button1+' '+(extraClass? extraClass : "")} 
   		target={(newTab? "_blank" : "")}
   		data-modal={(modal? modal : "")}
   		data-youtube-id={(dataYoutubeId? dataYoutubeId : "")}

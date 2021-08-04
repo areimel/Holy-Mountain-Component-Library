@@ -77,19 +77,21 @@ export default function Home(props) {
           	<CustomHR/>
           	The Thank You modal is triggered by a URL parameter of '<a href="/?thank_you">?thank_you</a>'.
           	<CustomHR/>
+            <div className="flexRow">
+              <Button1
+                className="modal_open"
+                modal="DefaultModal"
+              >Default Modal</Button1>
+              
+              <Button1
+                className="modal_open"
+                modal="VideoModal"
+                dataYoutubeId="ubBPXQ5U2_0"
+                extraClass="sideMargin"
+              >Video Modal</Button1>
+            </div>
 
-          	<Button1
-          		className="modal_open"
-          		modal="DefaultModal"
-          	>Default Modal</Button1>
-
-          	<br/><br/>
           	
-          	<Button1
-          		className="modal_open"
-          		modal="VideoModal"
-          		dataYoutubeId="ubBPXQ5U2_0"
-          	>Video Modal</Button1>
           	
           </div>
         </Sandbox>

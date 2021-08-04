@@ -6,7 +6,6 @@ import DesktopNav from '@components/Navigation/DesktopNav/DesktopNav'
 import MobileNav from '@components/Navigation/MobileNav/MobileNav'
 import NavMenu from '@components/Navigation/NavMenu/NavMenu'
 import Footer from '@components/Navigation/Footer/Footer'
-import FilmGrainOverlay from '@components/Navigation/FilmGrainOverlay/FilmGrainOverlay'
 
 
 
