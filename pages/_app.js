@@ -9,6 +9,7 @@ import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/thumbs/thumbs.scss';
 import "@styles/sliders.scss";
+import "@styles/forms.scss";
 
 function Application({ Component, pageProps }) {
   return (
