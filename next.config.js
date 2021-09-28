@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   //distDir: 'build',
   serverRuntimeConfig: {
@@ -10,6 +12,9 @@ module.exports = {
     staticFolder: '/fonts',
   },
   images: {
-      loader: 'imgix',
-    },
+    loader: 'imgix',
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 }

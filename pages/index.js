@@ -7,6 +7,7 @@ import Sandbox from '@components/Template/Sandbox/Sandbox'
 import ComponentMeta from '@components/Template/ComponentMeta/ComponentMeta'
 import Footer from '@components/Template/Footer/Footer'
 
+import StyleGuideMaster from '@components/StyleGuide/StyleGuideMaster/StyleGuideMaster'
 
 
 //VARS
@@ -64,7 +65,7 @@ export default function Home(props) {
         
         <Sandbox>
           {/*Components go here*/}
-          
+          <StyleGuideMaster/>
         </Sandbox>
         
       </main>

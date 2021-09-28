@@ -1,4 +1,7 @@
 import '@styles/style.scss'
+import "@styles/vars.scss";
+import "@styles/mixins.scss";
+import "@styles/fonts.scss";
 import Head from 'next/head'
 
 //Swiper.JS
