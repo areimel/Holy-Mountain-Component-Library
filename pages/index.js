@@ -64,8 +64,7 @@ export default function Home(props) {
         </Container>
         
         <Sandbox>
-          {/*Components go here*/}
-          <StyleGuideMaster/>
+          Components go here
         </Sandbox>
         
       </main>

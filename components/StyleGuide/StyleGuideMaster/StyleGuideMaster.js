@@ -16,7 +16,7 @@ export default function Layout({
 				<div className={styles.SectionHeader}>
 					<h2>Colors</h2>
 				</div>
-
+				<br/>
 				<div className={styles.SectionHeader}>
 					<h3>Basic Colors</h3>
 				</div>

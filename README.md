@@ -5,8 +5,8 @@
 * Project-specific notes go here.
 
 #### Server Links ####
-* Local: http://localhost:3000/
-* Staging: 
+* Local:[Localhost 3000](http://localhost:3000/) 
+* Staging: [Netlify](https://holy-mountain-component-library.netlify.app/) 
 * Live: 
 
 ### Best Practices ###
@@ -17,5 +17,6 @@
 * Store your local project in a regular folder with no cloud syncing - this can cause issues with running/building the project
 
 ### Initialize ###
+* Use Node v10.24.0 (most stable version for project, set with nvm)
 * npm run init-setup (runs multiple setup commands)
 * npm run dev 

@@ -7,8 +7,7 @@ import Sandbox from '@components/Template/Sandbox/Sandbox'
 import ComponentMeta from '@components/Template/ComponentMeta/ComponentMeta'
 import Footer from '@components/Template/Footer/Footer'
 
-import FixedSplit from '@components/FixedSplit/FixedSplit'
-import Typography from '@components/Typography/Typography'
+import StyleGuideMaster from '@components/StyleGuide/StyleGuideMaster/StyleGuideMaster'
 
 
 //VARS
@@ -19,8 +18,9 @@ export async function getStaticProps() {
 	  let author = "Alec Reimel"
 	  let authorTeam = "Planet Caravan Studios"
 	  let description ="\
-	  						Fonts and Font Sizes demo.\
-	  					"
+		This is the inital demo template for Holy Mountain frontend components.  \
+		Clone this page out for demoing new components.\
+	  "
 	  let contentProps = 'N/A'
 	  let libraries = "N/A"
 	  
@@ -64,14 +64,15 @@ export default function Home(props) {
         </Container>
         
         <Sandbox>
-
-        	<Typography/>
-        	
+          {/*Components go here*/}
+          <StyleGuideMaster/>
         </Sandbox>
         
       </main>
 
       <Footer footerMessage={props.footerMessage} />
+
+     
     </>
   )
 }

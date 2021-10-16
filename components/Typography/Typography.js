@@ -1,6 +1,9 @@
 import styles from './Typography.module.scss'
 import styled from "styled-components";
 
+import StrokeText from '@components/Typography/StrokeText/StrokeText'
+
+
 const Wrapper = styled.div`
 	
 `;
@@ -11,6 +14,16 @@ export default function Typography({
 }) {
   return (
 <div className={styles.outer}>
+	<Wrapper 
+			className={styles.wrapper} 
+		>
+			<ul>
+				<li className={styles.display + " "} >
+					<StrokeText>Stroke Text: <span>ComputerFont</span></StrokeText>
+				</li>
+			</ul>
+		</Wrapper>
+
 	<Wrapper 
 		className={styles.wrapper} 
 	>
