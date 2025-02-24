@@ -15,97 +15,98 @@ export default function ModalWrapper({
 }) {
 
 	useEffect(() => {
-	    $(document).ready(function() {
-	      	
-	      	console.log('modal script connected');
+    $(document).ready(function() {
+      	
+      	console.log('modal script connected');
 
-	      	//OPEN
-	      		$('body').on('click','.modal_open',function(e) {
-	      			console.log('.modal_open clicked');
-	      			e.preventDefault();
-	      			var modal_get = $(this).data('modal');
-	      			console.log(modal_get);
-	      			$('.modal_overlay').addClass('active');
-	      			$('.modal[data-modal="'+modal_get+'"]').addClass('active');
-	      		});
+      	//OPEN
+      		$('body').on('click','.modal_open',function(e) {
+      			console.log('.modal_open clicked');
+      			e.preventDefault();
+      			var modal_get = $(this).data('modal');
+      			console.log(modal_get);
+      			$('.modal_overlay').addClass('active');
+      			$('.modal[data-modal="'+modal_get+'"]').addClass('active');
+      		});
 
-	      	//VIDEO
-	      		$('body').on('click','.modal_open[data-modal="VideoModal"]',function(e) {
-	      			e.preventDefault();
-	      			var video_id = $(this).attr('data-youtube-id');
-	      			$('.modal.video iframe').attr('src', 'https://www.youtube.com/embed/' + video_id + '?rel=0');
-	      			$('.modal_overlay').addClass('active');
-	      			$('.modal.video').addClass('active');
-	      		});
+      	//VIDEO
+      		$('body').on('click','.modal_open[data-modal="VideoModal"]',function(e) {
+      			e.preventDefault();
+      			var video_id = $(this).attr('data-youtube-id');
+      			$('.modal.video iframe').attr('src', 'https://www.youtube.com/embed/' + video_id + '?rel=0');
+      			$('.modal_overlay').addClass('active');
+      			$('.modal.video').addClass('active');
+      		});
 
-	      	//THANK YOU
-	      		var urlParams = new URLSearchParams(window.location.search);
-	      		if(urlParams.has('thank_you')){
-	      			var modal_get = "ThankYouModal";
-	      			console.log(modal_get);
-	      			$('.modal_overlay').addClass('active');
-	      			$('.modal[data-modal="'+modal_get+'"]').addClass('active');
-	      		}
+      	//THANK YOU
+      		var urlParams = new URLSearchParams(window.location.search);
+      		if(urlParams.has('thank_you')){
+      			var modal_get = "ThankYouModal";
+      			console.log(modal_get);
+      			$('.modal_overlay').addClass('active');
+      			$('.modal[data-modal="'+modal_get+'"]').addClass('active');
+      		}
 
 
-	      	//CLOSE
-	      		$('body').on('click','.modal_overlay',function(e) {
-	      			e.preventDefault();
-	      			$('.modal_overlay').removeClass('active');
-	      			$('.modal').removeClass('active');
+      	//CLOSE
+      		$('body').on('click','.modal_overlay',function(e) {
+      			e.preventDefault();
+      			$('.modal_overlay').removeClass('active');
+      			$('.modal').removeClass('active');
 
-	      			//only affects video modals
-	      			setTimeout(
-	      				function(){
-	      					$('.modal.video iframe').attr('src', '');
-	      				}, 500);
-	      		});
+      			//only affects video modals
+      			setTimeout(
+      				function(){
+      					$('.modal.video iframe').attr('src', '');
+      				}, 500);
+      		});
 
-	      		//Modal Close
-	      		$('body').on('click','.modal_close',function(e) {
-	      			e.preventDefault();
-	      			$('.modal_overlay').removeClass('active');
-	      			$('.modal').removeClass('active');
+      		//Modal Close
+      		$('body').on('click','.modal_close',function(e) {
+      			e.preventDefault();
+      			$('.modal_overlay').removeClass('active');
+      			$('.modal').removeClass('active');
 
-	      			//only affects video modals
-	      			setTimeout(
-	      				function() {
-	      					$('.modal.video iframe').attr('src', '');
-	      				}, 500);
-	      		});
+      			//only affects video modals
+      			setTimeout(
+      				function() {
+      					$('.modal.video iframe').attr('src', '');
+      				}, 500);
+      		});
 
-	      		//Close on Link Click
-	      		$('body').on('click','.modal a',function(e) {
-	      			e.preventDefault();
-	      			$('.modal_overlay').removeClass('active');
-	      			$('.modal').removeClass('active');
+      		//Close on Link Click
+      		$('body').on('click','.modal a',function(e) {
+      			e.preventDefault();
+      			$('.modal_overlay').removeClass('active');
+      			$('.modal').removeClass('active');
 
-	      			//only affects video modals
-	      			setTimeout(
-	      				function(){
-	      					$('.modal.video iframe').attr('src', '');
-	      				}, 500);
-	      		});
+      			//only affects video modals
+      			setTimeout(
+      				function(){
+      					$('.modal.video iframe').attr('src', '');
+      				}, 500);
+      		});
 
-	      	//ESC Key Close
-	      		var esc_key = 27;
+      	//ESC Key Close
+      		var esc_key = 27;
 
-	      		$(document).keyup(function(e) {
-	      		  if (e.keyCode == esc_key && $('.modal_overlay').hasClass('active')){
-	      		  	e.preventDefault();
-	      		  	$('.modal_overlay').removeClass('active');
-	      		  	$('.modal').removeClass('active');
+      		$(document).keyup(function(e) {
+      		  if (e.keyCode == esc_key && $('.modal_overlay').hasClass('active')){
+      		  	e.preventDefault();
+      		  	$('.modal_overlay').removeClass('active');
+      		  	$('.modal').removeClass('active');
 
-	      		  	//only affects video modals
-	      		  	setTimeout(
-	      		  		function(){
-	      		  			$('.modal.video iframe').attr('src', '');
-	      		  		}, 500);
-	      		  }
-	      		});
+      		  	//only affects video modals
+      		  	setTimeout(
+      		  		function(){
+      		  			$('.modal.video iframe').attr('src', '');
+      		  		}, 500);
+      		  }
+      		});
 
-	      });
-	  });
+      });
+    
+  });
 
 return (
 	<div className={styles.ModalWrapper}>
